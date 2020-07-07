@@ -104,4 +104,7 @@ body {
     .nav__list .list-item {
         padding: 1.2rem 1rem;
     }
+    .list-item{
+        display: inline-block;
+    }
 }
