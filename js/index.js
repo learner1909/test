@@ -7,7 +7,7 @@ const navlist = document.getElementById("navlist");
 function togglenav() {
     listitems.forEach(item => item.classList.toggle("hide"));
     if (navlist.style.right == "0%") {
-        navlist.style.right = "-30%";
+        navlist.style.right = "-100%";
     } else {
         navlist.style.right = "0%";
     }
