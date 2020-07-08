@@ -6,8 +6,13 @@
     --grey: #a5a5af;
     --gradient: linear-gradient(var(--blue), var(--yellow));
 }
+
 .mt-2 {
     margin-top: 2rem;
+}
+
+.hide {
+    display: none;
 }
 
 body {
@@ -15,28 +20,28 @@ body {
     margin: 0;
 }
 
-.hide {
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    padding-top: 0.6rem;
+    padding-right: 0.2rem;
+    padding-bottom: 2rem;
+    margin-right: 0px;
+    box-shadow: 0px 0.4px 5px grey;
+    height: 7%;
+}
+
+.logo {
+    background-image: url("./../imgs/cls.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    width: 80px;
+    height: 70px;
     display: none;
-    transition: all 0.3s;
 }
 
 .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-right: 0.2rem;
-    padding-bottom: 1.2rem;
-    margin-right: 0px;
-    box-shadow: 0px 0.4px 5px grey;
-    /* background: linear-gradient(); */
-}
-
-.nav  {
-    font-size: 1.2rem;
-    height: fit-content;
+    padding-right: 1rem;
 }
 
 .nav .nav__list {
@@ -45,15 +50,20 @@ body {
     display: block;
     list-style: none;
     font-size: 1rem;
-    margin-top: 1rem;
-    margin-right: 2rem;
+    position: fixed;
+    right: -30%;
+    z-index: 100;
+    background-color: white;
+    transition: right 0.3s ease-in-out;
 }
 
-.nav__list .nav__btn {
-    float: right;
+.nav__btn {
+    position: fixed;
+    top: 0.7rem;
+    right: 1rem;
 }
 
-.nav__list .nav__btn div {
+.nav .nav__btn div {
     width: 1.5rem;
     height: 0.2rem;
     margin-bottom: 0.2rem;
@@ -61,7 +71,8 @@ body {
 }
 
 .nav__list .list-item {
-    padding: 0.7rem 0.2rem;
+    width: fit-content;
+    padding: 0.7rem 0.5rem;
     text-align: right;
 }
 
@@ -78,33 +89,50 @@ body {
 .nav__list .list-item:hover a {
     color: white;
 }
-.logo{
-    border-radius: 50%;
-    width: 40%;
-    height: auto;
-}
 
 
 /* for desktop view */
 
-@media only screen and (min-width:1100px) {
+@media only screen and (min-width:420px) and (max-width:700px) {
     .nav {
+        margin-left: 75%;
+    }
+    .nav .nav__list {
+        display: unset;
+        position: unset;
+        right: 0%;
+    }
+}
+
+@media only screen and (min-width:1030px) {
+    .header {
         padding: 1rem 1.2rem 0rem;
     }
-    .mt-2{
+    .logo {
+        display: block;
+    }
+    .nav {
+        margin-left: 30%;
+    }
+    .mt-2 {
         margin: 0;
     }
     .nav .nav__list {
         margin-top: 0;
         display: flex;
+        position: unset;
+        right: 0%;
+        z-index: 0;
+        padding-left: 0.2rem;
     }
-    .nav__btn{
-        visibility: hidden;
+    .nav__btn {
+        display: none;
     }
     .nav__list .list-item {
-        padding: 1.2rem 1rem;
+        width: fit-content;
+        padding: 1.2rem 0.5rem;
     }
-    .list-item{
+    .list-item {
         display: inline-block;
     }
 }
