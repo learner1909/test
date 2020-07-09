@@ -88,7 +88,7 @@
 .carousel-control-next,
 .carousel-control-prev {
     position: absolute;
-    top: 18vw;
+    top: 0vw;
     bottom: 0;
     z-index: 1;
     display: -ms-flexbox;
@@ -192,4 +192,13 @@
 .carousel-inner img {
     width: 100%;
     height: 100%;
+}
+@media only screen and (min-width:1030px) {
+    .carousel-control-next,.carousel-control-prev {
+        top:0vw;
+    }
+}
+#demo{
+    position: relative;
+    top: 8rem;
 }
