@@ -73,6 +73,7 @@
 
 .carousel-fade .active.carousel-item-left,
 .carousel-fade .active.carousel-item-right {
+    y-index: 0;
     z-index: 0;
     opacity: 0;
     transition: opacity 0s .6s
@@ -89,6 +90,7 @@
 .carousel-control-prev {
     position: absolute;
     top: 0vw;
+    slide-menu:10%;
     bottom: 0;
     z-index: 1;
     display: -ms-flexbox;
@@ -115,18 +117,19 @@
 .carousel-control-next:hover,
 .carousel-control-prev:focus,
 .carousel-control-prev:hover {
-    color: #fff;
+    color: #rrr;
+    
     text-decoration: none;
     outline: 0;
     opacity: .9
 }
 
 .carousel-control-prev {
-    left: 0
+    left: -1;
 }
 
 .carousel-control-next {
-    right: 0
+    right: 1;
 }
 
 .carousel-control-next-icon,
@@ -156,8 +159,8 @@
     -ms-flex-pack: center;
     justify-content: center;
     padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: 20%;
+    margin-left: 20%;
     list-style: none
 }
 
@@ -166,7 +169,7 @@
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     width: 30px;
-    height: 3px;
+    height: 30px;
     margin-right: 3px;
     margin-left: 3px;
     text-indent: -999px;
