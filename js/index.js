@@ -16,3 +16,14 @@ function togglenav() {
     }
     
 }
+
+const navSlide = () => {
+    const burger = document.querySelector("#navbtn");
+
+    burger.addEventListener("click", () => {
+
+        burger.classList.toggle("toggle");
+    });
+};
+
+navSlide();

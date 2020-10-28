@@ -7,7 +7,6 @@
     --gradient: linear-gradient(var(--blue), var(--yellow));
 }
 
-
 .hide {
     display: none;
     visibility: hidden;
@@ -75,22 +74,33 @@ body {
     height: 0.2rem;
     margin-bottom: 0.2rem;
     background-color: black;
-    margin:  0.3rem 0;
-
+    margin: 0.3rem 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
-#navbtn{
+
+#navbtn {
     margin: 0.5rem 0.5rem;
 }
 
-.nav__list{
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav__list {
     margin-top: 3rem;
     width: 70%;
     padding-bottom: 0.5rem;
     padding-left: 0;
     height: 100%;
-}
-.list_item{
-
 }
 
 .nav__list .list-item {
@@ -98,13 +108,13 @@ body {
     text-align: left;
 }
 
-.list-item>a{
+.list-item>a {
     padding-left: 2.5rem;
 }
-li.list-item:first-child{
+
+li.list-item:first-child {
     border: none;
     margin-top: 2.5rem;
-
 }
 
 .nav__list .list-item a {
@@ -112,7 +122,6 @@ li.list-item:first-child{
     text-decoration: none;
     color: white;
     text-align: center;
-
 }
 
 .nav__list .list-item:hover {
@@ -128,9 +137,9 @@ li.list-item:first-child{
 
 @media only screen and (min-width:480px) and (max-width:1029px) {
     .nav .nav__list {
-        font-size:1.5rem;
+        font-size: 1.5rem;
     }
-    .nav__list .list-item{
+    .nav__list .list-item {
         padding: 1.2rem 0.5rem;
     }
 }
@@ -160,11 +169,11 @@ li.list-item:first-child{
         background-color: transparent;
         width: fit-content;
     }
-    .nav__list{
+    .nav__list {
         opacity: 1;
         height: auto;
     }
-    .nav__list .list-item a{
+    .nav__list .list-item a {
         color: var(--dark-green);
     }
     .nav__btn {
@@ -175,16 +184,13 @@ li.list-item:first-child{
         padding: 1.2rem 0rem;
     }
     .list-item {
-        display: inline-block;  
-
+        display: inline-block;
     }
-    .list-item>a{
-    padding: 0.8rem 1.2rem;
-    margin: 0;
+    .list-item>a {
+        padding: 0.8rem 1.2rem;
+        margin: 0;
     }
-    li.list-item:first-child{
-    margin-top: 0;
-
+    li.list-item:first-child {
+        margin-top: 0;
     }
-
 }
